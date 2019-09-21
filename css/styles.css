@@ -1,0 +1,388 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  …
+}
+
+.main-header {
+  background-color: #eeeeee;
+}
+
+.main-navigation {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+  opacity: 0.8;
+}
+
+.main-navigation a:active {
+  opacity: 0.3;
+}
+
+.site-navigation a,
+.shopping-cart a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.shopping-cart a:hover,
+.shopping-cart a:focus {
+  color: #fb565a;
+}
+
+.site-navigation a:active,
+.shopping-cart a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.current {
+  border-bottom: 2px solid #fb565a;
+}
+
+.slider-button {
+  width: 240px;
+  height: 50px;
+  background-color: #fb565a;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.slider-button:hover,
+.slider-button:focus {
+  background-color: #e74246;
+}
+
+.slider-button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-promo-text b {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.main-promo-text p {
+  color: #283136;
+}
+
+.product-item h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.product-item p {
+  color: #283136
+}
+
+.button-red {
+  width: 160px;
+  height: 50px;
+  background-color: #fb565a;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.button-red:hover,
+.button-red:focus {
+  background-color: #e74246;
+}
+
+.button-red:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+}
+
+.button-green {
+  width: 160px;
+  height: 50px;
+  background-color: #00ca74;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.button-green:hover,
+.button-green:focus {
+  background-color: #00bc6c;
+}
+
+.button-green:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #00aa62;
+}
+
+.button-yellow {
+  width: 160px;
+  height: 50px;
+  background-color: #efc84a;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.button-yellow:hover,
+.button-yellow:focus {
+  background-color: #eab534;
+}
+
+.button-yellow:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #e5a722;
+}
+
+.about-us-text b {
+  font-size: 45px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.about-us-text p {
+  text-align: left
+  color: #283136;
+}
+
+.about-us-text h4,
+.we-can {
+  color: #283136;
+  text-align: left;
+}
+
+.about-us-text h4 {
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+caption {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats-percent td {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.stats-criteria td {
+  text-align: left;
+  color: #283136;
+}
+
+.our-clients img {
+  opacity: 0.2;
+}
+
+.our-clients img:hover,
+.our-clients img:focus {
+  opacity: 1;
+}
+
+.our-clients img:active {
+  opacity: 0.1;
+}
+
+.contacts b {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.contacts p {
+  color: #666666;
+}
+
+.contact-us-button {
+  background-color: #fb565a;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.social-buttons a {
+  display: inline-block;
+  width: 79px;
+  height: 79px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.social-buttons a:hover,
+.social-buttons a:focus {
+	background-color: #e74246;
+}
+
+.social-buttons a:active {
+	background-color: #d7373b;
+}
+
+.social-button-vk {
+	background-image: url("../img/vk-icon.svg");
+}
+
+.social-button-vk:active {
+	background-image: url("../img/vk-icon.svg");
+  opacity: 0.3;
+}
+
+/* НА НАЖАТИЕ СТАНОВИТСЯ ПРОЗРАЧНОЙ КНОПКА, А НЕ ЛОГОТИП ВНУТРИ */
+
+.social-button-fb {
+	background-image: url("../img/fb-icon.svg");
+}
+
+.social-button-fb:active {
+  background-image: url("../img/fb-icon.svg");
+  opacity: 0.3;
+}
+
+.social-button-insta {
+  background-image: url("../img/insta-icon.svg");
+}
+
+.social-button-insta:active {
+  background-image: url("../img/insta-icon.svg");
+  opacity: 0.3;
+}
+
+.discount b {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.discount p {
+  text-align: left;
+  color: #444444;
+}
+
+.modal-window b {
+  font-size: 45px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.modal-close a {
+  display: inline-block;
+  background-image: url("../img/close-cross.svg");
+  opacity: 0.3;
+}
+
+.modal-close a:hover,
+.modal-close a:focus {
+  background-image: url("../img/close-cross.svg");
+}
+
+.modal-close a:active {
+  background-image: url("../img/close-cross.svg");
+  opacity: 0.1;
+}
+
+.appointment-form label {
+  font-weight: bold;
+}
+
+.appointment-form input:hover {
+  border: solid 2px #b4b9bb;
+}
+
+.appointment-form input:focus {
+  border: solid 2px #000000;
+}
+
+.appointment-form input:invalid {
+  border: solid 2px #e74246;
+}
+
+.name input {
+  width: 360px;
+  height: 50px;
+  border: solid 2px #d7dcde;
+  background-color: #ffffff;
+}
+
+.e-mail input {
+  width: 360px;
+  height: 50px;
+  border: solid 2px #d7dcde;
+  background-color: #ffffff;
+}
+
+.message textarea {
+  width: 760px;
+  height: 118px;
+  border: solid 2px #d7dcde;
+  background-color: #ffffff;
+}
+
+::-webkit-input-placeholder,
+::-webkit-input-placeholder:hover {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+::-webkit-input-placeholder:focus {
+  color: #444444;
+}
+
+::-webkit-input-placeholder:invalid {
+  color: #e74246;
+}
+
+.page-title h1 {
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.filter-button {
+  width: 260px;
+  height: 50px;
+  background-color: #eeeeee;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: #dfdfdf;
+}
+
+.filter-button:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d5d5d5;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-option {
+  list-style: none;
+}
