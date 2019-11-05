@@ -110,24 +110,8 @@ a {
   box-sizing: border-box;
 }
 
-/*.slider {
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  margin-top: 18px;
-  position: relative;
-}
-
-.slide {
-  display: flex;
-  width: 100%;
-  min-width: 100%;
-  align-items: center;
-}*/
 .slider {
   position: relative;
-
   background-color: #eeeeee;
 }
 
@@ -638,10 +622,6 @@ caption {
   vertical-align: middle;
 }
 
-
-/* НА НАЖАТИЕ СТАНОВИТСЯ ПРОЗРАЧНОЙ КНОПКА, А НЕ ЛОГОТИП ВНУТРИ */
-
-
 .discount {
   margin-left: 139px;
 }
@@ -678,14 +658,119 @@ fieldset {
   min-width: 0;
 }
 
+.filter-item {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 56px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 81px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f1f1f1;
+
+  border-radius: 5px;
+}
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  width: 20px;
+  height: 23px;
+  padding: 0;
+
+  /*border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;*/
+  background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  font-size: 0;
+  margin-bottom: 62px;
+  padding-top: 3px;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.price-controls input {
+  width: 80px;
+  padding: 8px 10px;
+  margin-left: 10px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
 .filter-label {
   display: block;
-
 }
 
 .filter-label-radio::before {
   display: inline-block;
-  background-image: url(../img/radio-off.svg);
+  background-image: url("../img/radio-off.svg");
   content: "";
   width: 25px;
   height: 25px;
@@ -703,7 +788,55 @@ fieldset {
 }
 
 .filter-input-radio:checked + .filter-label-radio::before {
-  background-image: url(../img/radio-on.svg);
+  background-image: url("../img/radio-on.svg");
+}
+
+.range-grid {
+  margin-bottom: 20px;
+}
+
+.radio-list {
+  margin-bottom: 35px;
+  color: #283136;
+}
+
+.filter-label-checkbox::before {
+  display: inline-block;
+  background-image: url("../img/checkbox-off.svg");
+  content: "";
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  opacity: 0.4;
+  margin-right: 13px;
+}
+
+.filter-label-checkbox span {
+  vertical-align: middle;
+}
+
+.filter-label-checkbox {
+  margin-bottom: 15px;
+}
+
+.filter-input-checkbox:checked + .filter-label-checkbox::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.range-adds {
+  margin-bottom: 22px;
+}
+
+.checkbox-list {
+  margin-bottom: 50px;
+  color: #283136;
+}
+
+.filter-label-radio:hover::before,
+.filter-label-checkbox:hover::before,
+.filter-label-radio:focus::before,
+.filter-label-checkbox:focus::before {
+  opacity: 1;
 }
 
 .catalog-list {
@@ -724,6 +857,23 @@ fieldset {
   display: flex;
 }
 
+.sort-list a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-list a:hover,
+.sort-list a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-list a:active {
+  color: #000000;
+}
+
+.sort-list .active {
+  color: #000000;
+}
+
 .sort-form {
   display: flex;
   justify-content: space-between;
@@ -732,6 +882,14 @@ fieldset {
 
 .arrow-down {
   margin-right: 18px;
+}
+
+.sort-arrows svg {
+  opacity: 0.3;
+}
+
+.active-arrow svg {
+  opacity: 1;
 }
 
 .price-item {
@@ -752,9 +910,13 @@ fieldset {
   font-size: 14px;
 }
 
+.sort-form b {
+  font-size: 18px;
+}
+
 .catalog-item-link::before {
   content: "";
-  background-image: url(../img/browser.svg);
+  background-image: url("../img/browser.svg");
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
@@ -815,6 +977,15 @@ fieldset {
   margin-bottom: 25px;
 }
 
+.catalog-item-name:hover,
+.catalog-item-name:focus {
+  color: #fb565a;
+}
+
+.catalog-item-name:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .catalog-item-description {
   color: #666666;
   line-height: 1.13;
@@ -835,6 +1006,16 @@ fieldset {
   border-radius: 2px;
 }
 
+.price-button:hover,
+.price-button:focus {
+  background-color: #e74246;
+}
+
+.price-button:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
+
 .pages {
   margin-bottom: 60px;
   margin-top: 27px;
@@ -843,12 +1024,13 @@ fieldset {
 .pagination-list {
   display: flex;
   flex-wrap: wrap;
+  font-weight: 500;
 }
 
 .page {
   display: block;
-  border: solid 3px #dbdbdb;
-  background-color: #dbdbdb;
+  border: solid 3px #eeeeee;
+  background-color: #eeeeee;
   text-transform: uppercase;
   line-height: 20px;
   padding-top: 12px;
@@ -862,8 +1044,22 @@ fieldset {
   border-radius: 2px;
 }
 
+.page:hover,
+.page:focus {
+  background-color: #dfdfdf;
+  border: solid 3px #dfdfdf;
+}
+
+.page:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #d5d5d5;
+  border: solid 3px #d5d5d5;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
 .active-page {
   background-color: white;
+  border: solid 3px #dbdbdb;
 }
 
 .next-page {
@@ -872,7 +1068,7 @@ fieldset {
 }
 
 .modal-window {
-  display: none;
+  /*display: none;*/
   position: fixed;
   width: 960px;
   height: 590px;
@@ -992,11 +1188,19 @@ fieldset {
 }
 
 .filter-button {
+  display: block;
   width: 260px;
   height: 50px;
   background-color: #eeeeee;
   font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  border-radius: 3px;
+  border: none;
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  padding: 13px 0;
 }
 
 .filter-button:hover,

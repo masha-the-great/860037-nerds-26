@@ -41,14 +41,25 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <aside class="left-column">
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
-              <legend>СТОИМОСТЬ:</legend>
-              <input type="range">
-              <!-- доделать стоимость -->
+            <fieldset class="filter-item range">
+              <legend class="range-price">СТОИМОСТЬ:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style=""></div>
+                  </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                  <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                </div>
+              </div>
             </fieldset>
-            <fieldset>
-              <legend>Сетка:</legend>
-              <ul class="list-without-dots">
+            <fieldset class="filter-item">
+              <legend class="range-grid">Сетка:</legend>
+              <ul class="list-without-dots radio-list">
                 <li class="filter-option">
                   <input class="filter-input filter-input-radio visually-hidden" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
                   <label class="filter-label filter-label-radio" for="filter-adaptive"><span>Адаптивная</span></label>
@@ -63,9 +74,9 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>ОСОБЕННОСТИ:</legend>
-              <ul class="list-without-dots">
+            <fieldset class="filter-item">
+              <legend class="range-adds">ОСОБЕННОСТИ:</legend>
+              <ul class="list-without-dots checkbox-list">
                 <li class="filter-option">
                   <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
                   <label class="filter-label filter-label-checkbox" for="filter-slider">Слайдер</label>
@@ -88,7 +99,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button type="submit" class="filter-button button">Показать</button>
+            <button type="submit" class="filter-button">Показать</button>
           </form>
         </aside>
 
@@ -105,12 +116,12 @@
               <li class="name-item">
                 <a href="#" class="sort-item">По названию</a>
               </li>
-              <li class="sort-arrows">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
-                <a href="#" class="arrow-down active"><span class="visually-hidden">По убыванию</span></a>
+              <li class="sort-arrows active-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                <a href="#" class="arrow-down"><span class="visually-hidden">По убыванию</span></a>
               </li>
               <li class="sort-arrows">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
                 <a href="#" class="arrow-up"><span class="visually-hidden">По возрастанию</span></a>
               </li>
             </ul>
@@ -138,6 +149,7 @@
                   <span class="price-button" href="#">9900 руб</span>
                 </div>
                 </a>
+                <!--Карточка товара: название товара является ссылкой - мне кажется удобнее с точки зрения пользователя сделать ссылкой не просто название, а всю карточку товара, чтобы не целиться для клика только на название-->
               </li>
               <li class="catalog-item">
                 <a href="#" class="catalog-item-link">
