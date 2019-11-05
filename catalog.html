@@ -247,21 +247,19 @@
 
     <section class="modal-window">
       <b>Напишите нам</b>
-      <button class="button-close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
-      </button>
+      <button class="button-close" type="button" aria-label="Закрыть"></button>
       <form class="appointment-form" action="" method="post">
         <p class="input-name">
           <label for="name">Ваше имя:</label>
-          <input type="text" name="name" id="name" value="" placeholder="Имя Фамилия">
+          <input class="your-name" type="text" name="name" id="name" value="" placeholder="Имя Фамилия">
         </p>
         <p class="input-e-mail">
           <label for="e-mail">Ваш e-mail:</label>
-          <input type="email" name="e-mail" id="e-mail" value="" placeholder="email@example.com">
+          <input class="your-email" type="email" name="e-mail" id="e-mail" value="" placeholder="email@example.com">
         </p>
         <p class="input-message">
-          <label for="message">Текст письма::</label>
-          <textarea rows="5" name="message" id="message" value="" placeholder="В свободной форме"></textarea>
+          <label for="message">Текст письма:</label>
+          <textarea class="your-message" rows="5" name="message" id="message" value="" placeholder="В свободной форме"></textarea>
         </p>
         <button class="button-submit">Отправить</button>
       </form>

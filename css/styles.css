@@ -1068,7 +1068,7 @@ fieldset {
 }
 
 .modal-window {
-  /*display: none;*/
+  display: none;
   position: fixed;
   width: 960px;
   height: 590px;
@@ -1087,9 +1087,11 @@ fieldset {
 }
 
 .modal-window b {
+  display: block;
   font-size: 45px;
   font-weight: 500;
   text-align: left;
+  margin-bottom: 40px;
 }
 
 .button-close {
@@ -1120,6 +1122,11 @@ fieldset {
 .appointment-form label {
   font-weight: bold;
   display: block;
+  opacity: 0.5;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 12px;
 }
 
 .appointment-form input {
@@ -1141,7 +1148,7 @@ fieldset {
   min-width: 100%;
 }
 
-.appointment-form input:hover {
+/*.appointment-form input:hover {
   border: solid 2px #b4b9bb;
 }
 
@@ -1167,6 +1174,85 @@ fieldset {
 .message textarea {
   border: solid 2px #d7dcde;
   background-color: #ffffff;
+}*/
+
+.button-submit {
+  display: block;
+  width: 260px;
+  padding: 18px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fb565a;
+  border-radius: 3px;
+  border: none;
+  margin-top: 15px;
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  background-color: #e74246;
+}
+
+.button-submit:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.button-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url("../img/close-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.button-close:hover {
+  opacity: 1;
+}
+
+.button-close:active {
+  opacity: .1;
+}
+
+.your-name,
+.your-email,
+.your-message {
+  border: solid 2px #d7dcde;
+  border-radius: 2px;
+}
+
+.your-name:hover,
+.your-email:hover,
+.your-message:hover {
+  border: solid 2px #b4b9bb;
+}
+
+.your-name:focus,
+.your-email:focus,
+.your-message:focus{
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.your-name:invalid,
+.your-email:invalid,
+.your-message:invalid {
+  box-shadow: none;
+  color: #e74246;
+  border: 2px solid #e74246;
 }
 
 ::-webkit-input-placeholder,
